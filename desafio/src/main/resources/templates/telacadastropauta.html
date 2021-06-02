@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html xmlns:th="http://thymeleaf.org"
+	  xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout">
+	  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<!-- HTML5 -->
+<meta charset="utf-8"/>
+<head>
+  <link href="css/style.css" rel="stylesheet"/>
+ <script type="text/javascript" src="bootstrap/js/bootstrap.min.js"></script> 
+<link type="text/css" rel="stylesheet" href="bootstrap/css/bootstrap.min.css" media="all"></head>
+
+<body class="bg-dark">
+	<div class="cover-container d-flex w-100 h-100 p-3 mx-auto flex-column">
+  <header class="mb-auto ">
+    <div>
+
+      <h3 class="float-md-start mb-0 text-white"> Cadastro Pautas</h3>
+
+      <nav class="nav nav-masthead  float-md-end">
+        <a class="nav-link" href="/administrador"><button type="button" class="btn btn-light">Voltar</button></a>
+      
+      </nav>
+    </div>
+  </header>
+  
+  
+  
+<form method="post" th:object="${pauta}">
+  <div class="mb-3">
+  <label for="exampleFormControlTextarea1" class="form-label text-white">Descricão</label>
+  <textarea class="form-control" name="descricao" th:field="*{descricao}" rows="3"></textarea>
+  </div>
+  
+	<select th:field="*{assembleia}" required>
+    	<option th:each="assemble : ${assembleias}"
+     		th:value="${assemble.id}"
+     		th:text="${assemble.nome}">
+     	</option>
+<br>
+    </select>
+	
+	<button type="submit" class="btn btn-light" >Salvar</button>
+	
+</form>
+  <footer class="mt-auto text-white-50">
+    <p>Exame Cooperativa <a href="https://getbootstrap.com/" class="text-white "> @mdo</a>.</p>
+  </footer>
+</div>
+</body>
+ 
+</html>

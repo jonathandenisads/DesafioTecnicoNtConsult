@@ -1,0 +1,49 @@
+<html>
+<head>
+  <link href="css/style.css" rel="stylesheet"/>
+ <script type="text/javascript" src="bootstrap/js/bootstrap.min.js"></script> 
+<link type="text/css" rel="stylesheet" href="bootstrap/css/bootstrap.min.css" media="all"></head>
+
+<body class="bg-dark">
+	<div class="cover-container d-flex w-100 h-100 p-3 mx-auto flex-column">
+  <header class="mb-auto ">
+    <div>
+      <a href="/"> <h3 class="float-md-start mb-0 text-white"> Principal</h3></a>
+      <nav class="nav nav-masthead  float-md-end">
+        <a class="nav-link active" aria-current="page" href="/associado">Sou Associado</a>
+        <a class="nav-link" href="/administrador">Sou Administrador</a>
+      
+      </nav>
+    </div>
+  </header>
+
+  <main class="px-3 text-white">
+  <br>
+    <h1>Desafio Técnico</h1>
+    <p>No cooperativismo, cada associado possui um voto e as decisões são tomadas em assembleias, por votação.
+	A partir disso, você precisa criar uma solução back-end para gerenciar essas sessões de votação.
+	Essa solução deve ser executada na nuvem e promover as seguintes funcionalidades através de uma API
+	REST:
+		<p >● Cadastrar uma nova pauta;<br>
+		● Abrir uma sessão de votação em uma pauta (a sessão de votação deve ficar aberta por um tempo
+		determinado na chamada de abertura ou 1 minuto por default);<br>
+		
+		● Receber votos dos associados em pautas (os votos são apenas 'Sim'/'Não'. Cada associado é
+		identificado por um id único e pode votar apenas uma vez por pauta);<br>
+		
+		● Contabilizar os votos e dar o resultado da votação na pauta.</p>
+		
+	<p>Para fins de exercício, a segurança das interfaces pode ser abstraída e qualquer chamada para as interfaces
+	pode ser considerada como autorizada. A escolha da linguagem, frameworks e bibliotecas é livre (desde que
+	não infrinja direitos de uso).
+	É importante que as pautas e os votos sejam persistidos e que não sejam perdidos com o restart da aplicação.</p>
+   
+  </main>
+
+  <footer class="mt-auto text-white-50">
+    <p>Exame Cooperativa <a href="https://getbootstrap.com/" class="text-white "> @mdo</a>.</p>
+  </footer>
+</div>
+</body>
+ 
+</html>

@@ -1,0 +1,61 @@
+<html xmlns:th="http://thymeleaf.org"
+	xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<!-- HTML5 -->
+<meta charset="utf-8" />
+<head>
+<link href="css/style.css" rel="stylesheet" />
+<script type="text/javascript" src="bootstrap/js/bootstrap.min.js"></script>
+<link type="text/css" rel="stylesheet"
+	href="bootstrap/css/bootstrap.min.css" media="all">
+</head>
+
+<body class="bg-dark">
+	<div class="cover-container d-flex w-100 h-50 p-3 mx-auto flex-column">
+		<header class="mb-auto ">
+			<div>
+
+				<h3 class="float-md-start mb-0 text-white">Votação</h3>
+				<nav class="nav nav-masthead  float-md-end">
+					<a class="nav-link" href="/"><button type="button"
+							class="btn btn-light">Inicio</button></a>
+				</nav>
+			</div>
+		</header>
+
+
+
+ <form method="post" th:object="${votacao}" class="mt-5">
+ 
+		<div th:each="pauta : ${pautas}">
+			<h5 class="text-white">Descricao da Pauta</h5>
+			<div class="row">
+				<p class="text-white">
+					Descrição: <span th:text="${pauta.descricao}"></span>
+				</p>
+			</div>	
+		</div>
+		
+		<div class="form-check text-white">
+			<input class="form-check-input text-white" type="radio" name="flexRadioDefault"
+				id="flexRadioDefault1" th:field="*{status}" value="SIM"> <label class="form-check-label"
+				for="flexRadioDefault1"> SIM </label>
+		</div>
+		<div class="form-check text-white">
+			<input class="form-check-input " type="radio" name="flexRadioDefault"
+				id="flexRadioDefault2" checked th:field="*{status}" value="NAO"> <label
+				class="form-check-label" for="flexRadioDefault2"> NÃO </label>
+		</div>
+		<button type="submit" class="btn btn-light" >Salvar</button>
+		
+</form>
+		<footer class="mt-auto text-white-50">
+			<p>
+				Exame Cooperativa <a href="https://getbootstrap.com/"
+					class="text-white "> @mdo</a>.
+			</p>
+		</footer>
+	</div>
+</body>
+
+</html>
